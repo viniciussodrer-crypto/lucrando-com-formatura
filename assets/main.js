@@ -22,6 +22,13 @@
   setInterval(tick, 1000);
 })();
 
+// Pixel: registra início de checkout ao clicar em qualquer botão de compra da Hotmart.
+document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (a) {
+  a.addEventListener('click', function () {
+    if (window.fbq) fbq('track', 'InitiateCheckout', { value: 19.90, currency: 'BRL' });
+  });
+});
+
 // Setas do carrossel (no mobile o carrossel é arrastável com o dedo).
 document.querySelectorAll('[data-carousel]').forEach(function (car) {
   var track = car.querySelector('.car-track');
