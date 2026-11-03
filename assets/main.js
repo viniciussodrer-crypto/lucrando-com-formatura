@@ -22,6 +22,20 @@
   setInterval(tick, 1000);
 })();
 
+// Repassa os UTMs do anúncio (e src/xcod) para os links de checkout da Hotmart.
+// Sem UTM na URL, marca utm_source=organic. O "sck" fica a cargo do track1click.
+(function () {
+  var page = new URLSearchParams(location.search);
+  var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'xcod'];
+  var hasUtm = keys.some(function (k) { return page.get(k); });
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (a) {
+    var u = new URL(a.href);
+    keys.forEach(function (k) { if (page.get(k) && !u.searchParams.get(k)) u.searchParams.set(k, page.get(k)); });
+    if (!hasUtm && !u.searchParams.get('utm_source')) u.searchParams.set('utm_source', 'organic');
+    a.href = u.toString();
+  });
+})();
+
 // Setas do carrossel (no mobile o carrossel é arrastável com o dedo).
 document.querySelectorAll('[data-carousel]').forEach(function (car) {
   var track = car.querySelector('.car-track');
