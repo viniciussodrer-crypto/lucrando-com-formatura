@@ -95,9 +95,10 @@ p { margin: 0 0 1em; }
 .lead { color: var(--muted); font-size: 1.1rem; margin: 0; }
 .lead b { color: var(--text); }
 .hero-cover img, .split-media img {
-  width: min(320px, 86%); margin: 0 auto;
-  aspect-ratio: 1/1; object-fit: cover; object-position: center 45%;
-  border-radius: 28px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.06);
+  width: min(380px, 94%); margin: 0 auto;
+  aspect-ratio: 694/860; object-fit: contain;
+  background: #000; border-radius: 28px;
+  box-shadow: 0 0 0 1px rgba(245,197,24,.18), 0 30px 70px -20px rgba(0,0,0,.8), 0 0 80px -10px rgba(245,197,24,.25);
 }
 .hero-intro { font-size: 1.05rem; margin-bottom: 24px; }
 .hero-buy { display: flex; flex-direction: column; align-items: center; }
@@ -160,7 +161,7 @@ p { margin: 0 0 1em; }
 .split-text .h3 { font-size: 1.35rem; margin-bottom: .6em; }
 .split-text p { color: #33333a; font-size: 1.05rem; }
 .split-text p b { color: var(--light-text); }
-.split-media img { box-shadow: 0 24px 50px -20px rgba(0,0,0,.35); }
+.split-media img { box-shadow: 0 30px 60px -20px rgba(0,0,0,.45); }
 .buy-box {
   background: var(--bg); color: var(--text);
   border-radius: 24px; padding: 32px 20px; text-align: center;
@@ -274,7 +275,7 @@ p { margin: 0 0 1em; }
   }
   .hero-text { grid-area: text; align-self: end; }
   .hero-cover { grid-area: cover; }
-  .hero-cover img { width: 100%; max-width: 420px; }
+  .hero-cover img { width: 100%; max-width: 460px; }
   .hero-buy { grid-area: buy; align-items: flex-start; align-self: start; }
   .hero-buy .price { align-items: flex-start; }
   .hero-buy .price-new small { text-align: left; }
