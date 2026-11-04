@@ -179,7 +179,7 @@ p { margin: 0 0 1em; }
 .about { background: var(--bg); }
 .about-grid { display: grid; gap: 28px; align-items: center; }
 .about-photo { margin: 0; text-align: center; }
-.about-photo img { width: min(300px, 75%); margin: 0 auto 12px; border-radius: 24px; aspect-ratio: 4/5; object-fit: cover; object-position: center 35%; border: 1px solid var(--line); }
+.about-photo img { width: min(280px, 72%); margin: 0 auto 14px; border-radius: 50%; aspect-ratio: 1/1; object-fit: cover; object-position: center; border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(245,197,24,.12), 0 24px 50px -18px rgba(0,0,0,.8); }
 .about-photo figcaption { font-weight: 600; color: var(--accent-2); }
 .about-text { font-size: 1.05rem; }
 .about-text > p { color: #dcdce2; }
@@ -260,7 +260,7 @@ p { margin: 0 0 1em; }
   .car-btn { display: block; }
   .split { grid-template-columns: 1.2fr 1fr; gap: 48px; }
   .about-grid { grid-template-columns: 380px 1fr; gap: 56px; }
-  .about-photo img { width: 100%; }
+  .about-photo img { width: 100%; max-width: 340px; }
   .b-list { max-width: 920px; margin: 0 auto; }
   .b-card { grid-template-columns: 300px 1fr; align-items: center; }
   .b-card img { height: 100%; aspect-ratio: auto; min-height: 300px; }
